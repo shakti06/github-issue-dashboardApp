@@ -1,9 +1,12 @@
 package com.shakti.githubissueapplication;
 
+import com.shakti.githubissueapplication.config.GithubProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
+@EnableConfigurationProperties(GithubProperties.class)
 public class GithubIssueApplication {
 
     public static void main(String[] args) {

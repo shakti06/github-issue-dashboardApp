@@ -3,7 +3,7 @@ package com.shakti.githubissueapplication.events;
 import javax.persistence.*;
 import java.io.Serializable;
 @Entity
-public class GitHubProject implements Serializable {
+public class GithubProject implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
@@ -11,11 +11,11 @@ public class GitHubProject implements Serializable {
     @Column(unique = true)
     private String repoName;
 
-    public GitHubProject(){
+    public GithubProject(){
 
     }
 
-    public GitHubProject(String orgName, String repoName) {
+    public GithubProject(String orgName, String repoName) {
         this.orgName = orgName;
         this.repoName = repoName;
     }
@@ -46,7 +46,7 @@ public class GitHubProject implements Serializable {
 
     @Override
     public String toString() {
-        return "GitHubProject{" +
+        return "GithubProject{" +
                 "id=" + id +
                 ", orgName='" + orgName + '\'' +
                 ", repoName='" + repoName + '\'' +
